@@ -20,8 +20,8 @@ public class TeamController {
 
     @PostMapping("/createTeam")
     public ResponseEntity<String> createTeam(@Valid @RequestBody Team team) {
-
-        return null;
+        teamService.saveTeam(team);
+        return ResponseEntity.ok("Team added successfully");
     }
 
     @GetMapping("/getAllTeams")
