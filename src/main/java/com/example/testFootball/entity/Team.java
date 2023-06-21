@@ -1,9 +1,7 @@
 package com.example.testFootball.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
@@ -18,17 +16,22 @@ import javax.validation.constraints.*;
 public class Team {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotNull
+    @NotBlank(message = "Name is required.")
     private String name;
 
     private String city;
 
     private String owner;
 
+    @Positive
     private Integer stadiumCapacity;
 
+    @Max(3)
+    @Min(1)
     private Integer division;
 
     private String competition;

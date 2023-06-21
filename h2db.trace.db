@@ -1,0 +1,19 @@
+2023-06-20 13:11:33 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "DROP [*]TEAM"; se esperaba "TABLE, INDEX, USER, SEQUENCE, CONSTANT, TRIGGER, VIEW, ROLE, ALIAS, SCHEMA, ALL OBJECTS, DOMAIN, TYPE, DATATYPE, AGGREGATE, SYNONYM"
+Syntax error in SQL statement "DROP [*]TEAM"; expected "TABLE, INDEX, USER, SEQUENCE, CONSTANT, TRIGGER, VIEW, ROLE, ALIAS, SCHEMA, ALL OBJECTS, DOMAIN, TYPE, DATATYPE, AGGREGATE, SYNONYM"; SQL statement:
+DROP TEAM [42001-214]
+2023-06-20 13:13:05 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "DROP [*]FROM *TEAM"; se esperaba "TABLE, INDEX, USER, SEQUENCE, CONSTANT, TRIGGER, VIEW, ROLE, ALIAS, SCHEMA, ALL OBJECTS, DOMAIN, TYPE, DATATYPE, AGGREGATE, SYNONYM"
+Syntax error in SQL statement "DROP [*]FROM *TEAM"; expected "TABLE, INDEX, USER, SEQUENCE, CONSTANT, TRIGGER, VIEW, ROLE, ALIAS, SCHEMA, ALL OBJECTS, DOMAIN, TYPE, DATATYPE, AGGREGATE, SYNONYM"; SQL statement:
+DROP FROM *TEAM [42001-214]
+2023-06-20 13:16:25 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE TEAMTEAM [*]TEAM TEAM TEAM TEAM"
+Syntax error in SQL statement "CREATE TABLE TEAMTEAM [*]TEAM TEAM TEAM TEAM"; SQL statement:
+CREATE TABLE TEAMTEAM TEAM TEAM TEAM TEAM [42000-214]
+2023-06-20 13:16:28 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "TEAM" ya existe
+Table "TEAM" already exists; SQL statement:
+CREATE TABLE TEAM [42101-214]
+2023-06-20 13:37:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TEAM" not found (this database is empty); SQL statement:
+insert into team (id, city, competition, creation_date, division, name, number_of_players, owner, stadium_capacity) values (default, ?, ?, ?, ?, ?, ?, ?, ?) [42104-214]
