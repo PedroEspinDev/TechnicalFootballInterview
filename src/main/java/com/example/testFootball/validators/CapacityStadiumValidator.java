@@ -5,7 +5,8 @@ import com.example.testFootball.entity.Team;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
-public class CapacityStadiumValidator implements ConstraintValidator<CapacityStadium, Team> {
+public class
+CapacityStadiumValidator implements ConstraintValidator<CapacityStadium, Team> {
 
     @Override
     public boolean isValid(Team team, ConstraintValidatorContext context) {
