@@ -1,18 +1,18 @@
 package com.example.testFootball.entity;
 
+import com.example.testFootball.validators.CapacityStadium;
 import lombok.*;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
+import java.util.Date;
 
 
 @Entity
-@NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Setter
 @Table(name = "team")
+@CapacityStadium
 public class Team {
 
     @Id
