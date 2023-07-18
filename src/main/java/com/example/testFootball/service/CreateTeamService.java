@@ -1,6 +1,8 @@
 package com.example.testFootball.service;
 
+import com.example.testFootball.dto.UpdateTeamDTO;
 import com.example.testFootball.entity.Team;
+import com.example.testFootball.mapper.ITeamMapper;
 import com.example.testFootball.repository.ITeamRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -10,6 +12,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class CreateTeamService {
     private final ITeamRepository teamRepository;
+    private final ITeamMapper teamMapper;
+    private final Team team;
 
     public Team save(Team team) {
         return teamRepository.save(team);

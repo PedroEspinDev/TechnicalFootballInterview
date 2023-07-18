@@ -28,7 +28,7 @@ public class Team {
     private String owner;
 
     @Positive
-    private Integer stadiumCapacity;
+    private int stadiumCapacity;
 
     @Max(3)
     @Min(1)
@@ -38,5 +38,5 @@ public class Team {
 
     private Integer numberOfPlayers;
 
-    private String creationDate;
+    private Date creationDate;
 }
