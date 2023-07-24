@@ -3,10 +3,8 @@ package com.example.testFootball.mapper;
 import com.example.testFootball.dto.TeamDTO;
 import com.example.testFootball.entity.Team;
 import org.mapstruct.Mapper;
-<<<<<<< HEAD
 import org.mapstruct.Mapping;
-=======
->>>>>>> 9099d80 (Fix bugs and implement class update)
+
 import org.mapstruct.factory.Mappers;
 
 import java.util.List;

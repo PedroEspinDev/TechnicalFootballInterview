@@ -40,10 +40,7 @@ public class Team {
 
     private Integer numberOfPlayers;
 
-<<<<<<< HEAD
-    private String creationDate;
-=======
     @Past
     private Date creationDate;
->>>>>>> 9099d80 (Fix bugs and implement class update)
+
 }
