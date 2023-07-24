@@ -13,6 +13,5 @@ CapacityStadiumValidator implements ConstraintValidator<CapacityStadium, Team> {
     return team.getDivision() == 1 && team.getStadiumCapacity() > 50000 ||
            team.getDivision() == 2 && team.getStadiumCapacity() > 10000 ||
            team.getDivision() == 3 && team.getStadiumCapacity() > 3000;
-
     }
 }

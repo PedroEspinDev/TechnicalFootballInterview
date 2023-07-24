@@ -7,8 +7,10 @@ import javax.persistence.*;
 import javax.validation.constraints.*;
 import java.util.Date;
 
-
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
+@Builder
 @Getter
 @Setter
 @Table(name = "team")
@@ -38,5 +40,6 @@ public class Team {
 
     private Integer numberOfPlayers;
 
+    @Past
     private Date creationDate;
 }

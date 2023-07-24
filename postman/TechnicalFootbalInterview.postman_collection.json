@@ -1,156 +1,135 @@
 {
 	"info": {
-		"_postman_id": "1778ca35-0680-415f-b760-21c7d77398d7",
-		"name": "TechnicalFootbalInterview",
+		"_postman_id": "81d36c37-fabb-4068-b034-d3ff06b5ec2f",
+		"name": "FOOTBALL",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "26266401"
+		"_exporter_id": "27201603"
 	},
 	"item": [
 		{
-			"name": "Create",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n  \"name\": \"Real Madrid\",\r\n  \"city\": \"Madrid\",\r\n  \"owner\": \"Florentino Pérez\",\r\n  \"stadiumCapacity\": 81044,\r\n  \"division\": 1,\r\n  \"competition\": \"La Liga\",\r\n  \"numberOfPlayers\": 25,\r\n  \"creationDate\": \"1902-03-06\"\r\n}"
+			"name": "TechnicalFootballInterview",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Bagre FC\",\r\n  \"city\": \"Alicante\",\r\n  \"owner\": \"Pedrele\",\r\n  \"stadiumCapacity\": 90000,\r\n  \"division\": 1,\r\n  \"competition\": \"Liga de fútbol\",\r\n  \"numberOfPlayers\": 25,\r\n  \"creationDate\": \"2000-01-01\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/team/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"team",
+								"create"
+							]
+						}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:8080/team/create",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"team",
-						"create"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "getAll",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/team/getAll",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"team",
-						"getAll"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "getAllByCapacity",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/team//getAllByCapacity",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"team",
-						"",
-						"getAllByCapacity"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Delete",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/team/delete/:id",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"team",
-						"delete",
-						":id"
-					],
-					"variable": [
-						{
-							"key": "id",
-							"value": null
+				{
+					"name": "getById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"AlicanteFC\",\r\n  \"city\": \"Aicante\",\r\n  \"owner\": \"Pedrele\",\r\n  \"stadiumCapacity\": 50000,\r\n  \"division\": 2,\r\n  \"competition\": \"Liga de fútbol\",\r\n  \"numberOfPlayers\": 25,\r\n  \"creationDate\": \"2000-01-01\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "localhost:8080/team/getById/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"team",
+								"getById",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
 						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "findById",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/team/findById/:id",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"team",
-						"findById",
-						":id"
-					],
-					"variable": [
-						{
-							"key": "id",
-							"value": null
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"AlicanteFC\",\r\n  \"city\": \"Aicante\",\r\n  \"owner\": \"Pedrele\",\r\n  \"stadiumCapacity\": 50000,\r\n  \"division\": 2,\r\n  \"competition\": \"Liga de fútbol\",\r\n  \"numberOfPlayers\": 25,\r\n  \"creationDate\": \"2000-01-01\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "localhost:8080/team/getById/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"team",
+								"getById",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
 						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "update",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/team/update/:id",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"team",
-						"update",
-						":id"
-					],
-					"variable": [
-						{
-							"key": "id",
-							"value": null
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"AlicanteFC\",\r\n  \"city\": \"Aicante\",\r\n  \"owner\": \"Pedrele\",\r\n  \"stadiumCapacity\": 50000,\r\n  \"division\": 2,\r\n  \"competition\": \"Liga de fútbol\",\r\n  \"numberOfPlayers\": 25,\r\n  \"creationDate\": \"2000-01-01\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "localhost:8080/team/getAll",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"team",
+								"getAll"
+							]
 						}
-					]
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		}
 	]
 }

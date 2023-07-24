@@ -1,8 +1,8 @@
 package com.example.testFootball.controller;
 
-import com.example.testFootball.dto.UpdateTeamDTO;
 import com.example.testFootball.entity.Team;
 import com.example.testFootball.exceptions.TeamNotFoundException;
+import com.example.testFootball.resources.TeamResource;
 import com.example.testFootball.service.CreateTeamService;
 import com.example.testFootball.service.UpdateTeamService;
 import lombok.RequiredArgsConstructor;
@@ -19,23 +19,11 @@ import javax.validation.Valid;
 @Validated
 public class UpdateTeamController {
     private final UpdateTeamService updateTeamService;
-    private final UpdateTeamDTO updateTeamDTO;
-    private final CreateTeamService teamService;
-
     @PutMapping("/update/{id}")
-        public ResponseEntity<String> updateTeam(@PathVariable Long id, @Valid @RequestBody UpdateTeamDTO updateTeamDTO) {
-        Team existingTeam = updateTeamService.updateTeamById(id);
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void updateTeam(@PathVariable Long id, @Valid @RequestBody TeamResource teamResource) {
+    updateTeamService.update(id,teamResource);
 
-        existingTeam.setName(updateTeamDTO.getName());
-        existingTeam.setCity(updateTeamDTO.getCity());
-        existingTeam.setOwner(updateTeamDTO.getOwner());
-        existingTeam.setStadiumCapacity(updateTeamDTO.getStadiumCapacity());
-        existingTeam.setDivision(updateTeamDTO.getDivision());
-        existingTeam.setCompetition(updateTeamDTO.getCompetition());
-        existingTeam.setNumberOfPlayers(updateTeamDTO.getNumberOfPlayers());
-        Team updatedTeam = teamService.save(existingTeam);
-
-        return ResponseEntity.ok("Team updated successfully");
     }
     @ExceptionHandler(TeamNotFoundException.class)
     public ResponseEntity<String> handleInvalidInitialStatusException(final RuntimeException exception) {
