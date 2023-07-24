@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "81d36c37-fabb-4068-b034-d3ff06b5ec2f",
+		"name": "FOOTBALL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27201603"
+	},
+	"item": [
+		{
+			"name": "TechnicalFootballInterview",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Bagre FC\",\r\n  \"city\": \"Alicante\",\r\n  \"owner\": \"Pedrele\",\r\n  \"stadiumCapacity\": 90000,\r\n  \"division\": 1,\r\n  \"competition\": \"Liga de fútbol\",\r\n  \"numberOfPlayers\": 25,\r\n  \"creationDate\": \"2000-01-01\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/team/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"team",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"AlicanteFC\",\r\n  \"city\": \"Aicante\",\r\n  \"owner\": \"Pedrele\",\r\n  \"stadiumCapacity\": 50000,\r\n  \"division\": 2,\r\n  \"competition\": \"Liga de fútbol\",\r\n  \"numberOfPlayers\": 25,\r\n  \"creationDate\": \"2000-01-01\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "localhost:8080/team/getById/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"team",
+								"getById",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"AlicanteFC\",\r\n  \"city\": \"Aicante\",\r\n  \"owner\": \"Pedrele\",\r\n  \"stadiumCapacity\": 50000,\r\n  \"division\": 2,\r\n  \"competition\": \"Liga de fútbol\",\r\n  \"numberOfPlayers\": 25,\r\n  \"creationDate\": \"2000-01-01\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "localhost:8080/team/getById/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"team",
+								"getById",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"AlicanteFC\",\r\n  \"city\": \"Aicante\",\r\n  \"owner\": \"Pedrele\",\r\n  \"stadiumCapacity\": 50000,\r\n  \"division\": 2,\r\n  \"competition\": \"Liga de fútbol\",\r\n  \"numberOfPlayers\": 25,\r\n  \"creationDate\": \"2000-01-01\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "localhost:8080/team/getAll",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"team",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
